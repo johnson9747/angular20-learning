@@ -1,0 +1,29 @@
+@if (housingLocation(); as location) {
+  <article>
+    <img
+      class="listing-photo"
+      [src]="location.photo"
+      alt="Exterior photo of {{ location.name }}"
+      crossorigin
+    />
+    <section class="listing-description">
+      <h2 class="listing-heading">{{ location.name }}</h2>
+      <p class="listing-location">{{ location.city }}, {{ location.state }}</p>
+    </section>
+    <section class="listing-features">
+      <h2 class="section-heading">About this housing location</h2>
+      <ul>
+        <li>Units available: {{ location.availableUnits }}</li>
+        <li>Does this location have wifi: {{ location.wifi ? 'Yes' : 'No' }}</li>
+        <li>Does this location have laundry: {{ location.laundry ? 'Yes' : 'No' }}</li>
+      </ul>
+    </section>
+    @if (location.availableUnits > 0) {
+      <section class="enquiry-form">
+        <app-enquiry></app-enquiry>
+      </section>
+    }
+  </article>
+} @else {
+  <p>Loading location details...</p>
+}

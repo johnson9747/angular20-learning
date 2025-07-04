@@ -1,0 +1,79 @@
+/* Styles for the enquiry form container */
+.listing-apply {
+  padding: 24px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.section-heading {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Style the form itself */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* space between form groups */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style for labels */
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Style for input fields and textarea */
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit; /* Ensure textarea uses the same font */
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  resize: vertical; /* Allow vertical resize for textarea */
+}
+
+/* Style for input fields on focus */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #605dc8; /* Using the same purple from before */
+  box-shadow: 0 0 0 3px rgba(96, 93, 200, 0.25);
+}
+
+/* The submit button already has a .primary class. */
+button.primary {
+  background-color: #605dc8;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: flex-start; /* Don't stretch the button */
+}
+
+button.primary:hover {
+  background-color: #4e4a9c;
+  transform: translateY(-2px);
+}
+
+button.primary:active {
+  transform: translateY(0);
+}

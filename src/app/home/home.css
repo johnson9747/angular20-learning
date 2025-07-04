@@ -1,0 +1,48 @@
+section {
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin: 40px 0;
+}
+
+form input[type="text"] {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+form input[type="text"]:focus {
+  outline: none;
+  border-color: #605dc8;
+  box-shadow: 0 0 0 3px rgba(96, 93, 200, 0.25);
+}
+
+button.primary {
+  padding: 12px 25px;
+  background-color: #605dc8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.primary:hover {
+  background-color: #4e4a9c;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}

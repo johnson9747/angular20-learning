@@ -1,0 +1,11 @@
+<section class="listing">
+      <img
+        class="listing-photo"
+        [src]="houseLocation().photo"
+        alt="Exterior photo of {{ houseLocation().name }}"
+        crossorigin
+      />
+      <h2 class="listing-heading">{{ houseLocation().name }}</h2>
+      <p class="listing-location">{{ houseLocation().city }}, {{ houseLocation().state }}</p>
+      <a [routerLink]="['/details', houseLocation().id]">Learn More</a>
+    </section>
