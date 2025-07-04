@@ -1,0 +1,11 @@
+.brand-logo {
+  width: 30px;
+  height: auto;
+}
+/* This ensures the logo is on the left and the nav is on the right */
+header.brand-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
