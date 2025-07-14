@@ -1,13 +1,23 @@
-import { Component } from '@angular/core';
-import {CommonModule} from '@angular/common';
-import { RouterModule } from '@angular/router';
+import {  Component, inject } from '@angular/core';
+import { RouterOutlet, RouterLink } from '@angular/router';
+import { AuthService } from './auth.service';
+import { Login } from "./login/login";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule],
+  standalone: true,
+  imports: [RouterOutlet, RouterLink, Login],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
-  protected title = 'angular-learning';
+  auth = inject(AuthService);
+
+  constructor() {
+  }
+
+  logout() {
+    this.auth.logout();
+    google.accounts.id.disableAutoSelect(); // Optional but recommended
+  }
 }

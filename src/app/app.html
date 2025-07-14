@@ -3,8 +3,15 @@
     <a [routerLink]="['/']">
       <img class="brand-logo" src="logo.svg" alt="logo" aria-hidden="true" />
     </a>
+    @if (auth.isLoggedIn()) {
+      <button class="logout-button" (click)="logout()">Logout</button>
+    }
   </header>
-  <section class="content">
-    <router-outlet></router-outlet>
-  </section>
+    @if (auth.isLoggedIn()) {
+    <section class="content">
+      <router-outlet></router-outlet>
+    </section>
+  } @else {
+    <app-login />
+  }
 </main>
