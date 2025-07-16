@@ -1,5 +1,5 @@
 export interface HousingLocationInfo {
-    id:number;
+    locationId:number;
     name:string;
     city: string;
     state: string;

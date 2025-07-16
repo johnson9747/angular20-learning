@@ -5,7 +5,7 @@
       </form>
     </section>
           <section class="results">
-            @for (housingLocation of filteredLocationList(); track housingLocation.id) {
+            @for (housingLocation of filteredLocationList(); track housingLocation.locationId) {
     <app-housing-location
         [houseLocation]="housingLocation"
       ></app-housing-location>
