@@ -31,7 +31,6 @@ submitApplication() {
     this.locationId
   ).subscribe({
     next: (response) => {
-      alert('Application submitted successfully!');
       this.applyForm.reset();
       console.log(response);
       this.enquiryNotificationService.emit(Date.now().toString() + ',' + this.locationId.toString());

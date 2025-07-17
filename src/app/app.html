@@ -4,7 +4,10 @@
       <img class="brand-logo" src="logo.svg" alt="logo" aria-hidden="true" />
     </a>
     @if (auth.isLoggedIn()) {
+      <div class="user-info">
+      <span class="user-name">Hi {{ auth.getUserNameFromJwt() }}</span>
       <button class="logout-button" (click)="logout()">Logout</button>
+      </div>
     }
   </header>
     @if (auth.isLoggedIn()) {

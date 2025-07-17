@@ -23,6 +23,12 @@ export class AuthService {
     if (!token) return true;
     return Date.now() > this.getTokenExpiry(token);
   }
+  getUserNameFromJwt(): string {
+    const token = this.idToken();
+    if (!token) return '';
+    const payload: any = jwtDecode(token);
+    return payload.name || payload.email || 'User';
+  }
   private scheduleTokenRenewal() {
     const token = this.idToken();
     if (!token) return;

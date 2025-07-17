@@ -21,7 +21,6 @@ export class HousingService {
   }
 
   submitApplication(mobileNo: string,details:string,locationId:number): Observable<Object> {
-    debugger;
     const body = {
       locationId,
       mobileNo,

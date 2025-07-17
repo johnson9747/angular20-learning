@@ -34,7 +34,6 @@ export class Details {
     this.housingService.getHousingLocationById(this.housingLocationId).subscribe({
       next: (location) => {
         this.housingLocation.set(location);
-        alert(`Location details loaded for ID: ${this.housingLocationId}`);
       },
       error: (e) => console.error(e)
     });
@@ -42,9 +41,7 @@ export class Details {
 
   // To update housingLocation after enquiry submission, emit an event from enquiry.ts and listen for it here.
   // Add an event handler for enquiry submission.
-  onEnquirySubmitted(locationId: string) {
-    debugger;
-   
+  onEnquirySubmitted(locationId: string) {   
     this.loadHousingLocation();
 
   
