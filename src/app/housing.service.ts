@@ -20,9 +20,22 @@ export class HousingService {
     return this.http.get<HousingLocationInfo>(`${this.url}/${id}`);
   }
 
-  submitApplication(firstName: string, lastName: string, email: string,query:string) {
-    console.log(
-      `Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}, query: ${query}`,
+  submitApplication(mobileNo: string,details:string,locationId:number): Observable<Object> {
+    debugger;
+    const body = {
+      locationId,
+      mobileNo,
+      details
+    };
+    return this.http.post(
+      `${environment.apiUrl}Housing/enquiry`,
+      body,
+      {
+      headers: {
+        'accept': 'text/plain',
+        'Content-Type': 'application/json'
+      }
+      }
     );
   }
 }

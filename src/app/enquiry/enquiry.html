@@ -3,20 +3,12 @@
         <h2 class="section-heading">Apply now to live here</h2>
         <form [formGroup]="applyForm" (submit)="submitApplication()">
           <div class="form-group">
-            <label for="first-name">First Name</label>
-            <input id="first-name" type="text" formControlName="firstName" />
+            <label for="mobileNo">Phone Number</label>
+            <input id="mobileNo" type="tel" formControlName="mobileNo" />
           </div>
           <div class="form-group">
-            <label for="last-name">Last Name</label>
-            <input id="last-name" type="text" formControlName="lastName" />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input id="email" type="email" formControlName="email" />
-          </div>
-          <div class="form-group">
-            <label for="query">Query</label>
-            <textarea id="query" rows="4" formControlName="query"></textarea>
+            <label for="details">Query</label>
+            <textarea id="details" rows="4" formControlName="details"></textarea>
           </div>
           <button type="submit" class="primary">Apply now</button>
         </form>

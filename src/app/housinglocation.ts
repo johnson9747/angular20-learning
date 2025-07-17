@@ -7,4 +7,11 @@ export interface HousingLocationInfo {
     availableUnits: number;
     wifi: boolean;
     laundry: boolean;
+    enquiries: Enquiries[];
+}
+export interface Enquiries {
+    firstName: string;
+    lastName: string;
+    email: string;
+    details: string;
 }

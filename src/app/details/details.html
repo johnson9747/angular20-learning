@@ -23,6 +23,14 @@
         <app-enquiry></app-enquiry>
       </section>
     }
+    @if (location.enquiries && location.enquiries.length > 0) {
+      <section class="enquiry-details">
+        <h2 class="section-heading">Enquiries</h2>
+        @for (enquiry of location.enquiries; track enquiry.email) {
+          <app-enquiry-details [enquiry]="enquiry"></app-enquiry-details>
+        }
+      </section>
+    }
   </article>
 } @else {
   <p>Loading location details...</p>
